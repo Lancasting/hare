@@ -1,6 +1,4 @@
-(function($) {
-$(document.ready(function() {
-   
+$(document).ready(function() {
     function init() {
         console.log("JS has loaded");
     }
@@ -25,5 +23,4 @@ $(document.ready(function() {
         }
     })
     init();
-}));
 });
