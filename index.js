@@ -1,9 +1,11 @@
 $(document.ready(function () {
+    console.log("scripts have loaded");
     function init() {
     }
 
-    $(".button.btn.btn-primary").submit(function (event) {
+    $(".submit").onClick(function () {
         console.log("button clicked");
+        preventDefault();
         let num = getElementById("numberInput")
         romanize(num);
 
@@ -27,4 +29,4 @@ $(document.ready(function () {
         preventDefault();
     })
     init();
-}));
+}))(jQuery)
