@@ -1,15 +1,13 @@
-$(document.ready(function () {
-    console.log("scripts have loaded");
+(function($) {
+$(document.ready(function() {
+   
     function init() {
+        console.log("JS has loaded");
     }
-
-    $(".submit").onClick(function () {
+    $(".submit").click(function () {
         console.log("button clicked");
-        preventDefault();
-        let num = getElementById("numberInput")
+        let num = getElementById("numberInput").text(num)
         romanize(num);
-
-
 
         function romanize(num) {
             console.log("function is running");
@@ -25,8 +23,7 @@ $(document.ready(function () {
                 roman = (key[+digits.pop() + (i * 10)] || "") + roman;
             return console.log(Array(+digits.join("") + 1).join("M") + roman);
         }
-
-        preventDefault();
     })
     init();
-}))(jQuery)
+}));
+});
