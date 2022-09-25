@@ -20,3 +20,11 @@ body {
 .mb-3 {
     text-align: center;
 }
+
+@media (max-width: 576px) {
+    .mb-3 {
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+  
+  }
