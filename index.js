@@ -2,12 +2,13 @@ $(document).ready(function() {
     function init() {
         console.log("JS has loaded");
     }
-    $(".submit").click(function () {
+    $(".btn").click(function () {
         console.log("button clicked");
-        let num = getElementById("numberInput").text(num)
+        let num = document.getElementById("numberInput")
         romanize(num);
 
         function romanize(num) {
+            console.log(num);
             console.log("function is running");
             if (isNaN(num))
                 return "Please enter a valid Number";
