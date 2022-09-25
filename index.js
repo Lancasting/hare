@@ -4,14 +4,17 @@ $(document).ready(function() {
     }
     $(".btn").click(function () {
         console.log("button clicked");
-        let num = document.getElementById("numberInput")
+        let num = $("#numberInput").val();
+        
+        // let num = document.querySelector("form-control");
+        // console.log(num);
         romanize(num);
 
         function romanize(num) {
             console.log(num);
             console.log("function is running");
             if (isNaN(num))
-                return "Please enter a valid Number";
+                alert( "Please enter a valid Number");
             var digits = String(+num).split(""),
                 key = ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM",
                     "", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC",
@@ -20,7 +23,10 @@ $(document).ready(function() {
                 i = 3;
             while (i--)
                 roman = (key[+digits.pop() + (i * 10)] || "") + roman;
-            return console.log(Array(+digits.join("") + 1).join("M") + roman);
+                let result = (Array(+digits.join("") + 1).join("M") + roman)
+                console.log(result);
+             $(".result").text(result);
+             event.preventDefault();
         }
     })
     init();
