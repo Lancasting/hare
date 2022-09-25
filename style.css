@@ -20,6 +20,9 @@ body {
 .mb-3 {
     text-align: center;
 }
+.form-label {
+    margin-top: 5px;
+}
 
 @media (max-width: 576px) {
     .mb-3 {
