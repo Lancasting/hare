@@ -3,8 +3,8 @@ body {
     font-family: 'Oswald', sans-serif;
 }
 
-.navbar-brand .navbar {
-    text-align: center;
+.navbar {
+    position: center;
 }
 
 .result {
@@ -17,6 +17,6 @@ body {
     margin-top: 5px;
     float: right; 
 }
-.form-label {
+.mb-3 {
     text-align: center;
 }
